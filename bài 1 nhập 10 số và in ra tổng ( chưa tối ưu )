@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int a,b,c,d,e,f,g,x,y,z, tong;
+    printf("nhập số: ", a);
+    scanf("%d", &a);
+    printf("nhập số: ", b);
+    scanf("%d", &b);
+    printf("nhập số: ", c);
+    scanf("%d", &c);
+    printf("nhập số: ", d);
+    scanf("%d", &d);
+    printf("nhập số: ", e);
+    scanf("%d", &e);
+    printf("nhập số: ", f);
+    scanf("%d", &f);
+    printf("nhập số: ", g);
+    scanf("%d", &g);
+    printf("nhập số: ", x);
+    scanf("%d", &x);
+    printf("nhập số: ", y);
+    scanf("%d", &y);
+    printf("nhập số: ", z);
+    scanf("%d", &z);
+     tong = a + b + c + d + e + f + g + x + y + z;
+    printf("%d", tong) ;
+    return 0;
+}
