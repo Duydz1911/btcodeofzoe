@@ -1,0 +1,19 @@
+#include <stdio.h>
+int isPrime(int x) {
+        if (x < 2) return 0;
+        for (int i = 2; i * i <= x; i++) { 
+            if (x % i == 0) return 0;
+        }
+        return 1;
+}
+int main() {
+    int a;
+    printf("check number: ");
+    scanf("%lld", &a);
+    if (isPrime(a)){
+     printf ("nó là số nguyên tố.\n", a );
+    } else {
+         printf (" nó không phải là số nguyên tố.\n", a );
+    }    
+    return 0;
+}
