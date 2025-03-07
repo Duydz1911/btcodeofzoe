@@ -4,8 +4,8 @@
 int main() {
     long long ma;
     printf("check number: ");
-    scanf("%d", &ma);
-    printf("ước lớn nhất là: %d\n", ma);
-    printf("bội nhỏ nhất là: %d\n", ma);
+    scanf("%lld", &ma);
+    printf("ước lớn nhất là: %lld\n", ma);
+    printf("bội nhỏ nhất là: %lld\n", ma);
     return 0;
 }
