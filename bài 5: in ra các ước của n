@@ -1,13 +1,13 @@
 #include <stdio.h>
 int main() {
     long long m ;
-    printf(" check munber: ");
+    printf("check munber: ");
     scanf("%lld", &m);
-      printf ("các ước của %lld là: " );
-    for( int i = 1; i <= m;i++)// check từ 1 đến m 
+      printf("các ước của %lld là: ");
+    for(int i = 1; i <= m;i++)              // check từ 1 đến m 
     if(m % i == 0){ 
-        printf ("%ld\t", i );
+        printf("%ld\t", i );
        }
-      printf ("\n" );
+      printf("\n" );
     return 0;
 }
