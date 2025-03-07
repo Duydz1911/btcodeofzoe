@@ -1,0 +1,11 @@
+//do lỗ hổng bài toán  không yêu cầu bội hay ước khác biến vừa nhập nên ước, bội và biến là cùng 1 số....
+#include <stdio.h>
+
+int main() {
+    long long ma;
+    printf("check number: ");
+    scanf("%d", &ma);
+    printf("ước lớn nhất là: %d\n", ma);
+    printf("bội nhỏ nhất là: %d\n", ma);
+    return 0;
+}
