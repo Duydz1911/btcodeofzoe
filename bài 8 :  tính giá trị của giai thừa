@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int n;
+    unsigned long long giaithua = 1;
+     
+     printf("nhập n: ");
+     scanf("%d", &n);
+     
+     if( n < 0)
+     {
+         printf ("không có giá trị giai thừa của %d ! \n");
+     }
+     else if (n == 0) 
+       {
+         printf ( "giá trị của %d! là : 1 \n", n);
+      }
+     else {
+         for( int i = 1; i <= n; i++)
+         giaithua *= i;
+         printf (" %d! = %llu", n , giaithua );
+      }
+  
+    return 0;
+}
