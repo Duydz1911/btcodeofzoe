@@ -1,0 +1,17 @@
+void inNhiPhan(int n){
+    if( n> 1){
+        inNhiPhan ( n/2 ); 
+    }
+    printf ("%d", n % 2);
+}
+ int main() {
+ int n ;
+ printf ("nhap vao co so 10:  ");
+ scanf ("%d", &n);
+ printf ("he co so 2 : ");
+ inNhiPhan(n); 
+ printf ("\n");
+ printf ("he bat phan: %o\n", n );
+ printf ("he co so 16: %X\n", n);
+    return 0;
+}
