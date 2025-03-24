@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int n ;
+    double S = 1.0;
+    unsigned long long a = 1;
+     printf (" hãy nhập n:  ");
+     scanf ("%d", & n);
+     if (n < 0)
+     {
+         printf ( " n phải lớn hơn hoặc bằng 0 ");
+     }
+     else if ( n == 0)
+     {
+         printf (" S = 2");
+     }
+     else {
+         for(int i = 1; i <= n; i++){
+         a *= i;
+         S += 1.0/a;
+         }
+     }
+    printf(" tổng S = %.6f \n ", S );
+
+    return 0;
+}
