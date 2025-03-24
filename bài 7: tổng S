@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int n;
+    double S= 0.0;
+    printf("nhập n: ");
+    scanf("%d",&n);
+    {
+      for(int i =1;i <= n; i++ ) 
+      S += 1.0/i ;
+      printf("tổng S là : %.6f\n", S);
+      printf("\n");
+    }
+    return 0;
+}
