@@ -1,0 +1,28 @@
+int main() {
+    int n,a, tongall = 0, tongduong = 0, tongam = 0, tsd = 0, tsa = 0;
+    printf("cần nhập bao nhiêu số ?:  ");
+    scanf("%d",&n);
+    printf("hãy nhập %d số : \n", n);
+    for( int i = 0; i < n; i++){
+        scanf("%d", &a);
+        tongall += a;
+        if ( a > 0)
+        {
+            tongduong += a;
+            tsd ++;
+        }
+        else if (a < 0)
+        {
+            tongam += a;
+            tsa ++;
+        }
+    }
+    printf ("tổng tất cả các số là : %d\n", tongall);
+    printf ("tổng tất cả các số dương là : %d\n", tongduong);
+    printf ("tổng tất cả các số âm là : %d\n", tongam);
+    printf ("trung bình cộng tất cả các số là : %.3f\n",(float)tongam / n );
+    printf ("trung bình công các số dương là : %.3f\n",(float) tongduong / tsd);
+    printf ("trung bình công các số âm là  : %.3f\n",(float) tongam / tsa );
+
+    return 0;
+}
