@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int n;
+    printf("so phan tu fen muon co trong mang: ");
+    scanf("%d", &n);
+    float a[n];
+    printf("nhap %d so vao mang: \n", n);
+    for(int i = 0; i < n; i++){
+    scanf("%f", &a[i]);
+    }
+    for(int i = 0; i < n - 1; i++){
+        for(int t = i + 1; t < n; t++){
+            if(a[i] > a[t]){
+                float kkk = a[i];
+                a[i] = a[t];
+                a[t] = kkk;
+            }
+        }
+    }
+    printf("mang duoc sap xep theo thu tu tang dan la:");
+    for(int i = 0; i < n; i++){
+        printf("%.2f\t", a[i]);
+    }
+    return 0;
+}
