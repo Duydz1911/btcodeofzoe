@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    float a[25];
+    int n = sizeof(a) / sizeof(a[0]), i;
+    for(int i = 0; i < 25; i ++){
+            a[i] = i - 12; 
+    }
+    for(int i = 0; i < 25; i++){
+        if (a[i] < 0){
+        a[i] = 0;
+        }
+    }
+        printf("mang khi da chinh sua gom : \n" );
+        for (int i = 0; i < n; i++ ){
+        printf("%.1f\t",a[i]);
+        }
+    return 0;
+}
