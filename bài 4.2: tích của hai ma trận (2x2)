@@ -1,0 +1,36 @@
+#include <stdio.h>
+   
+int main() {
+    int A[2][2], B[2][2], tich[2][2];
+    
+    printf("MA TRAN A \n");
+    for(int i=1; i<3; i++){
+        for(int j=1; j<3; j++){
+            printf("nhap a[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("MA TRAN B \n");
+    for(int i=1; i<3; i++){
+        for(int j=1; j<3; j++){
+            printf("nhap B[%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+    for(int i=1; i<3; i++){
+        for(int j=1; j<3; j++){
+            tich[i][j] = 0;
+            for(int k=1; k<3; k++){
+            tich[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    printf("tich cua hai ma tran la: \n");
+    for(int i=1; i<3; i++){
+        for(int j=1; j<3; j++){
+            printf("%d\t", tich[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
