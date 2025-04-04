@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int A[3][3], B[3][3], sum[3][3];
+    
+    printf("MA TRAN A \n");
+    for(int i=1; i<4; i++){
+        for(int j=1; j<4; j++){
+            printf("nhap a[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("MA TRAN B \n");
+    for(int i=1; i<4; i++){
+        for(int j=1; j<4; j++){
+            printf("nhap B[%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+    for(int i=1; i<4; i++){
+        for(int j=1; j<4; j++){
+            sum[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    printf("tong cua hai ma tran la: \n");
+    for(int i=1; i<4; i++){
+        for(int j=1; j<4; j++){
+            printf("%d\t", sum[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
