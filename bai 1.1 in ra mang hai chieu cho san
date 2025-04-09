@@ -1,0 +1,18 @@
+#include <stdio.h>
+#define row 3
+#define cow 3
+int main() {
+    int A[row][cow]={
+        {1,2,3},    
+        {4,5,6},
+        {7,8,9}
+    };
+    printf("mang A:\n ");
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < cow; j++){
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
