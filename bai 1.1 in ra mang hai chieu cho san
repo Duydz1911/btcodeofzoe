@@ -12,7 +12,7 @@ int main() {
         for(int j = 0; j < cow; j++){
             printf("%d ", A[i][j]);
         }
-        printf("\n");
+        printf("\n ");
     }
     return 0;
 }
