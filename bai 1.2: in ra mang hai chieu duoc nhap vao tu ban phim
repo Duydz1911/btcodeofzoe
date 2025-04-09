@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define row 3
+#define cow 3
+int main() {
+    int A[row][cow];
+    printf("mang A:\n ");
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < cow; j++){
+            printf("nhap vao A[%d][%d]: ",i,j );
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("mang da nhap vao:\n ");
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < cow; j++){
+            printf(" %d", A[i][j]);
+        }
+        printf("\n ");
+    }
+            
+    return 0;
+}
