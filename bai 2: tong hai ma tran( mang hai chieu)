@@ -1,0 +1,29 @@
+//tinh tong cua hai ma tran
+#include <stdio.h>
+#define row 3
+#define cow 3
+int main() {
+    int C[3][3];
+    int A[3][3] = {
+        {1, 2, 3},
+        {1, 2, 3},
+        {1, 2, 3}
+    };
+    int B[3][3] = {
+        {3, 2, 1},
+        {3, 2, 1},
+        {3, 2, 1}
+    };
+    for(int i=0; i < row; i++){
+        for(int j=0; j< cow;j++){
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+    printf("phep cong hai ma tran A+B=C:\n ");
+    for(int i=0; i < row; i++){
+        for(int j=0; j< cow;j++){
+            printf(" %d", C[i][j]);
+        }
+        printf("\n ");
+    }
+    return 0;
