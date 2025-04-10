@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main() {
+    int n;
+    printf("nhap n: ");
+    scanf("%d", &n);
+    int A[n][n];
+    int x=0, y=0;
+    int m = 1;
+    int hang = n, cot = n;
+
+    while(x < n && y <n){
+        for(int i=y ; i < cot; i ++)
+            A[x][i] = m++;
+            x++;
+        
+        for(int i=x; i < hang; i++ )
+            A[i][cot-1] = m++;
+            cot--;
+        
+        if(x< hang){
+        for(int i = cot - 1; i >=y; i--)
+            A[hang- 1][i] = m++;
+            hang--;
+    }
+        if(y<cot){
+            for( int i = hang - 1; i >= x; i--)
+                A[i][y] = m++;
+                y++;
+        }
+    }
+    
+    printf("ma tran xoay:\n ");
+    for(int i= 0; i < n; i++){
+        for( int j=0 ; j < n; j++){
+            printf("%3d ", A[i][j]);
+        }
+        printf("\n ");
+    }
+
+    return 0;
+}
