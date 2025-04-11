@@ -1,0 +1,13 @@
+#include <stdio.h>
+int hoandoi(int *a,int *b){
+    int c=*a;
+    *a=*b;
+    *b=c;
+}
+int main() {
+    int a= 19, b = 13;
+    printf("truoc khi hoan doi:a=%d, b=%d", a, b);
+    hoandoi(&a,&b);
+    printf("sau khi hoan doi: a=%d, b=%d", a, b);
+    return 0;
+}
