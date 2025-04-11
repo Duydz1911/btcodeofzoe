@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int arr[100],n;
+    int *p;
+    
+    printf("nhap so phan tu trong mang: ");
+    scanf("%d", &n);
+    
+    p = arr;
+    
+    printf("nhap cac phan tu trong mang:\n");
+    for(int i= 0; i < n; i++){
+        scanf(" %d",p + i);
+    }
+    printf("\n");
+    int max = *p, min = *p;
+    for(int i=0; i < n; i++){
+        if(*(p+i)> max) max = *(p+i);
+        if(*(p+i)< min) min = *(p+i);
+    }
+    printf("so lon nhat cua mang la: %d", max);
+    printf("\n");
+    printf("so nho nhat cua mang la: %d", min);
+     
+     return 0;
+}
