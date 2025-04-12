@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() { 
+    int a[1000], temp, n;
+    int *p = a;
+    printf("nhap vao so phan tu trong mang: ");
+    scanf("%d", &n);
+
+    for(int i=0; i < n; i++){
+        printf("nhap a[%d]: ",i);
+        scanf("%d", p+i);
+    }
+    for(int i=0; i< n-1; i ++){
+        for(int j = i+1; j < n; j++){
+            if(*(p + i)>*(p + j)){
+                temp = *(p + i);
+                *(p+i) = *(p+j);
+                *(p+j) = temp;
+            }  
+        }
+    }
+    printf("mang sau khi sap xep: ");
+    for(int i= 0; i < n; i++){
+        printf(" %d", *(p + i));
+    }
+    return 0;
+}
