@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> 
+typedef struct sinhvien {
+    char hoten[60];
+    int tuoi;
+    float diemtb;
+    struct sinhvien *next;
+} sinhvien;
+
+sinhvien* taosinhvien(char hoten[], int tuoi, float diemtb) {
+    sinhvien *sv = (sinhvien*) malloc(sizeof(sinhvien));
+    strcpy(sv->hoten, hoten);
+    sv->tuoi = tuoi;
+    sv->diemtb = diemtb;
+    sv->next = NULL;
+    return sv;
+}
+
+void indanhsach(sinhvien *head) {
+    printf("\nDANH SACH SINH VIEN.\n");
+    printf("%-5s %-20s %-10s %-10s\n","stt","ho ten","tuoi","diem trung binh");
+    int stt = 1;
+    sinhvien *p= head;
+    while(p != NULL){
+        printf("%-5d %-20s %-10d %-10.2f\n", stt++,p-> hoten,p-> tuoi, p->diemtb);
+        p= p->next;
+    }
+}
+void chentruoc(sinhvien **head, char *tencantim, char *hoten, int tuoi, float diemtb){
+    sinhvien *newsv = taosinhvien(hoten, tuoi, diemtb);
+    
+    if(*head == NULL || strcmp((*head)-> hoten, tencantim)==0){
+        newsv->next = *head;
+        *head = newsv;
+        return;
+    }
+    sinhvien *prev = NULL;
+    sinhvien *curr = *head;
+    while(curr != NULL && strcmp(curr->hoten, tencantim) != 0){
+        prev = curr;
+        curr = curr -> next;
+    }
+    newsv-> next = curr;
+    if(prev != NULL){
+        prev->next = newsv;
+    }
+}
+void xoasinhvien (sinhvien **head, char hoten[]){
+    sinhvien * curr = *head;
+    sinhvien * prev = NULL;
+     
+     while(curr != NULL && strcmp(curr-> hoten, hoten) !=0){
+         prev = curr;
+         curr = curr -> next;
+     }
+     if(curr == NULL) return;
+     
+     if(prev == NULL){
+         *head = curr -> next;
+     }else {
+         prev-> next = curr -> next;
+     }
+     free(curr);
+}
+int main() {
+    sinhvien* danhsach= NULL;
+    chentruoc(&danhsach, "", "Le Thi A", 19, 5);
+    chentruoc(&danhsach, "", "Le Nhat D", 18, 7.1);
+    indanhsach(danhsach);
+    
+    printf("\n Chen sinh vien Phan Hoang N truoc Le Thi A\n");
+    chentruoc(&danhsach, "Le Thi A", "Phan Hoang N", 19, 8.2 );
+    indanhsach(danhsach);
+    printf("\n Xoa sinh vien Le Nhat D");
+    xoasinhvien(&danhsach, "Le Nhat D");
+    indanhsach(danhsach);
+    return 0;
+}
